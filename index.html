@@ -5,24 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
   
   <title>Frontend Mentor | QR code component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+   :root { 
+    --main--color: white;
+    --light--color: hsl(212, 45%, 89%);
+    --dark--color: hsl(228, 45%, 12%);
+    }
+    body {
+      background: var(--light--color);
+    }
+    .attribution { font-size: 11px; text-align: center; background-color: var(--main--color); height: 470px; width: 300px; border-radius: 20px; justify-content: center; margin-left: 40%; margin-top:80px }
     .attribution a { color: hsl(228, 45%, 44%); }
+@media screen and (max-width: 600px) {
+      .attribution { width: 90%; margin-left: 5%; }
+    }
+    .img { display: flex; justify-content: center; align-items: center; }
+    .text { font-family: 'Outfit', sans-serif; color: var(--dark--color); padding: 20px; }
+    h1 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    p { font-size: 15px; font-weight: 400; color: hsl(228, 45%, 44%); margin-top: 0; margin-bottom: 0;
+  
+}
+
   </style>
 </head>
-<body>
-
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+<body style="justify-content: center;"  >
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="attribution" >
+    <div class="img">
+      <img src="images/image-qr-code.png" style="border-radius: 20px; width: 280px; margin-top:10px;" alt="qr-code-image">
+    </div>
+    <div class="text" style="text-align: center; margin-left: 6px; margin-right: 6px;">
+      <h1>Improve your front-end skills by building projects</h1>
+      <p style=" font-size: 15px; font-family: 'Outfit', sans-serif; ">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
   </div>
 </body>
 </html>
